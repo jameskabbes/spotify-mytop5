@@ -1,5 +1,5 @@
 {
-    "mode": "prod",
+    "mode": "dev",
     "authEndpoint": "https://accounts.spotify.com/authorize",
     "clientId": {
         "dev": "0b5470071d61401e8a334fe58fc9bd90",
