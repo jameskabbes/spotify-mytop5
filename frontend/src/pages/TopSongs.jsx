@@ -9,7 +9,7 @@ function TopSongs( {token} ) {
     const [ data, setData ] = useState(null);
     const [ loading, setLoading ] = useState(true);
 
-    const url = 'https://api.spotify.com/v1/me/top/tracks/?time_range=medium_term&limit=3'
+    const url = 'https://api.spotify.com/v1/me/top/tracks/?time_range=long_term&limit=3'
 
     useEffect( ()=> {
         async function callApiAsync(){
