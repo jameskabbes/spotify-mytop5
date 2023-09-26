@@ -1,0 +1,7 @@
+{
+    "authEndpoint": "https://accounts.spotify.com/authorize",
+    "clientId": "0b5470071d61401e8a334fe58fc9bd90",
+    "redirectUri": "http://localhost:5173",
+    "scopes": ["user-top-read"]
+}
+
