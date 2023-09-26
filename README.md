@@ -1,3 +1,3 @@
-#spotify_project
+# spotify
 
-undecided spotify project, hope to do something cool with the Spotify API
+[https://jameskabbes.github.io/spotify]
