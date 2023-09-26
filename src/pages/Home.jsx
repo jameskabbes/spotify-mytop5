@@ -1,24 +1,19 @@
-import spotify_app_config from '../spotify_app_config.json'
-import { useNavigate } from "react-router-dom"
+import config from '../config.json'
 import { useState, useEffect } from 'react';
 import { TopSongs } from './TopSongs';
 
 function Home(){
 
     const [ token, setToken ] = useState(null)
-    const navigate = useNavigate();
-
-    const tokenPath = `${spotify_app_config.authEndpoint
-        }?client_id=${spotify_app_config.clientId
-        }&redirect_uri=${spotify_app_config.redirectUri
-        }&scope=${spotify_app_config.scopes.join("%20")
+    const tokenPath = `${config.authEndpoint
+        }?client_id=${config.clientId[ config.mode ]
+        }&redirect_uri=${config.redirectUri[ config.mode ]
+        }&scope=${config.scopes.join("%20")
         }&response_type=token&show_dialog=true`
 
     const handleLoginClick = () => {
         window.open(tokenPath, "_self");
     };
-
-    
 
     useEffect(() => {
         const handleHashChange = () => {

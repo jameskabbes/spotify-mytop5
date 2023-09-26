@@ -5,7 +5,7 @@ import { PageNotFound }     from './pages/PageNotFound';
 function App() {
   return (
     <div className="App">
-      <BrowserRouter basename='/spotify' >
+      <BrowserRouter basename={ window.location.pathname || '' } >
           <Routes>
             <Route path='/'                       element={<Home/>} />
             <Route path="/404"                    element={<PageNotFound />} />
