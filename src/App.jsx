@@ -6,15 +6,23 @@ import { PageNotFound }     from './pages/PageNotFound';
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
+      <p>Testing!</p>
+    </div>
+  );
+}
+
+export { App };
+
+
+/*
+
+      <BrowserRouter basename='/spotify'>
           <Routes>
             <Route path='/'                       element={<Home/>} />
             <Route path="/404"                    element={<PageNotFound />} />
             <Route path="*"                       element={<Navigate to="/404" />} />
           </Routes>
       </BrowserRouter>
-    </div>
-  );
-}
 
-export { App };
+
+*/
