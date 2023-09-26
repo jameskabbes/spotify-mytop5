@@ -27,6 +27,7 @@ function TopTracks( {token, limit, offset, timeRange, setIsSubmit} ) {
                             key={i} 
                             song={song} 
                             token={token}
+                            ranking={ i+1+offset }
                         />
                     ) )
                     ) : null }

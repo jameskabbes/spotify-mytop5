@@ -1,4 +1,4 @@
-function Photo( {data, loading} ){
+function Photo( {data, loading } ){
 
     return (
         loading ? (
