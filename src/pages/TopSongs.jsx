@@ -21,18 +21,20 @@ function TopSongs( {token} ) {
 
     return (
         <>
-            <p>
-                Top songs!
-            </p>
-            { !loading? (
-                data.items.map( (song, i) => (
-                    <Song 
-                        key={i} 
-                        song={song} 
-                        token={token}
-                    />
-                ) )
-            ) : null }
+            <div class="container mx-auto mt-8">
+                <div class="flex flex-wrap -mx-4">
+                    { !loading? (
+                    data.items.map( (song, i) => (
+                        <Song 
+                            key={i} 
+                            song={song} 
+                            token={token}
+                        />
+                    ) )
+                    ) : null }
+
+                </div>
+            </div>
         </>
     )
 

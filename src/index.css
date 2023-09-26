@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.App {
+    @apply bg-gray-100;
+    min-width: 100vw;
+    min-height: 100vh;
+}
+
+.container {
+    @apply mx-auto max-w-lg mt-8
+}
+
+h1 {
+    @apply mb-4 text-6xl font-extrabold
+}
+
+h2 {
+    @apply mb-4 text-4xl font-bold
+}
+
+h3{
+    @apply mb-3 text-3xl font-semibold 
+}
+
+h4{
+    @apply mb-3 text-2xl 
+}
+
+h5{
+    @apply mb-2 text-xl 
+}
+h6{
+    @apply mb-1 text-lg 
+}
+
+p {
+}
+
+input{
+    @apply w-24 text-center placeholder-slate-800
+}
+
+.card {
+    @apply rounded overflow-hidden shadow-lg
+}
+
+
+.button {
+    @apply border border-gray-300 rounded-lg text-gray-600 font-bold py-1 px-2 transition duration-300 hover:bg-gray-100 hover:text-gray-800 focus:outline-none focus:border-blue-300 focus:ring focus:ring-blue-200
+}
+
+.team-runs-digit{
+}
+
+table {
+    @apply card    
+}
+
+
+/* implement dark mode somehow*/
+@media (prefers-color-scheme: dark) {
+    .h1 {
+        @apply text-gray-500
+    }
+    
+}
+

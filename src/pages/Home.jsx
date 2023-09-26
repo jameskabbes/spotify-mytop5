@@ -36,8 +36,12 @@ function Home(){
     return (
         <>
             { !token ? (
-                <div>
-                    <button onClick={handleLoginClick}>Login to Spotify</button>
+                <div className='flex h-screen items-center justify-center'>
+                    <button 
+                        className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-full"
+                        onClick={handleLoginClick}>
+                        Connect to Spotify
+                    </button>
                 </div>
             ) : (
                 <TopSongs token={token} />
