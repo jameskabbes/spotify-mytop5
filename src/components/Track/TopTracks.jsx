@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { callApi } from "../../utils/Api";
 import { Card } from './Card';
 
-function TopTracks( {token, limit, offset, timeRange} ) {
+function TopTracks( {token, limit, offset, timeRange, setIsSubmit} ) {
 
     const [ data, setData ] = useState(null);
     const [ loading, setLoading ] = useState(true);
@@ -32,6 +32,11 @@ function TopTracks( {token, limit, offset, timeRange} ) {
                     ) : null }
 
                 </div>
+
+                <button
+                    onClick={ () => setIsSubmit(false)}
+                >Try it again!</button>
+
             </div>
         </>
     )

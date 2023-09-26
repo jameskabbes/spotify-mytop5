@@ -16,7 +16,6 @@ function ConnectToSpotify(){
         <div className='flex flex-col h-screen items-center justify-center'>
             <h1>My Top 10</h1>
             <button 
-                className="bg-green-500 hover:bg-green-400 text-white font-bold py-2 px-6 rounded-full"
                 onClick={handleLoginClick}>
                 Connect to Spotify
             </button>

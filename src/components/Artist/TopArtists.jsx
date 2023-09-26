@@ -1,4 +1,4 @@
-function TopArtists( {token, number, offset, time_range} ){
+function TopArtists( {token, number, offset, time_range, setIsSubmit} ){
 
     return ( <p>TopArtists</p> )
 

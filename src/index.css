@@ -38,25 +38,60 @@ h6{
 p {
 }
 
-input{
-    @apply w-24 text-center placeholder-slate-800
+button {
+    @apply button-base
 }
 
-.card {
-    @apply rounded overflow-hidden shadow-lg
+.button-base{
+    @apply bg-green-500 hover:bg-green-400 text-white font-bold py-2 px-6 rounded-full 
+}
+
+.button-primary{
+    @apply button-base border border-2 border-gray-600
+}
+
+.button-secondary{
+    @apply  bg-gray-700 hover:bg-gray-600 text-green-400
 }
 
 
-.button {
-    @apply border border-gray-300 rounded-lg text-gray-600 font-bold py-1 px-2 transition duration-300 hover:bg-gray-100 hover:text-gray-800 focus:outline-none focus:border-blue-300 focus:ring focus:ring-blue-200
-}
 
-.team-runs-digit{
-}
 
-table {
-    @apply card    
-}
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 2px;
+    border-radius: 5px;
+    background: linear-gradient(to right, #1db954 0%, #1db954 100%);
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    margin: 0 10px;
+  }
+  
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #555555;
+    cursor: pointer;
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 16px;
+    height: 16;
+    border-radius: 50%;
+    background: #cccccc;
+    cursor: pointer;
+  }
+  
+  .slider:focus {
+    opacity: 1;
+  }
+
 
 
 /* implement dark mode somehow*/

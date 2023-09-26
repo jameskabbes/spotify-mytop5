@@ -18,7 +18,7 @@ function Menu( {token} ){
 
     const [ isSubmit, setIsSubmit ] = useState(false)
 
-    const [ type, setType ] = useState('tracks')
+    const [ type, setType ] = useState('artists')
     const [ limit, setLimit ] = useState( 5 )
     const [ offset, setOffset ] = useState( 0 )
     const [ timeRange, setTimeRange ] = useState( 'long_term' )    
@@ -28,28 +28,32 @@ function Menu( {token} ){
         <>
             { !isSubmit ? (
                 <>
-                    <ArtistsOrTracks 
-                    type={type} 
-                    setType={setType}
-                    />
-                    <Limit
-                        limit={limit}
-                        setLimit={setLimit}
-                    />
-                    <Offset
-                        offset={offset}
-                        setOffset={setOffset}
-                    />
-                    <TimeRange
-                        timeRange={timeRange}
-                        setTimeRange={setTimeRange}
-                    />
-                    <button
-                        onClick={ () => setIsSubmit(true) }
-                    >Generate</button>
+                    <div className="flex flex-col items-center">
+                        <ArtistsOrTracks 
+                        type={type} 
+                        setType={setType}
+                        />
+                        <Limit
+                            limit={limit}
+                            setLimit={setLimit}
+                        />
+                        <Offset
+                            offset={offset}
+                            setOffset={setOffset}
+                        />
+                        <TimeRange
+                            timeRange={timeRange}
+                            setTimeRange={setTimeRange}
+                        />
+                        <button
+                            className='bg-green-500 hover:bg-green-400 text-white font-bold py-2 px-6 rounded-full' 
+                            onClick={ () => setIsSubmit(true) }
+                        >Generate</button>
+
+                    </div>
                 </>
             ) : (
-                createElement( types[type], { token, limit, offset, timeRange },  )
+                createElement( types[type], { token, limit, offset, timeRange, setIsSubmit },  )
             ) }
 
         </>
