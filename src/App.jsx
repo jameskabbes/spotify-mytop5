@@ -9,7 +9,6 @@ function App() {
           <Routes>
             <Route path='/'                       element={<Home/>} />
             <Route path="/404"                    element={<PageNotFound />} />
-            <Route path="*"                       element={<Navigate to="/404" />} />
           </Routes>
       </BrowserRouter>
     </div>
