@@ -1,0 +1,16 @@
+{
+    "mode": "dev",
+    "authEndpoint": "https://accounts.spotify.com/authorize",
+    "clientId": {
+        "dev": "0b5470071d61401e8a334fe58fc9bd90",
+        "prod": "6172fb888b7f432e8b4690ba65146f3b"
+    }, 
+
+    "redirectUri": {
+        "dev": "http://localhost:5173",
+        "prod": "https://jameskabbes.github.io/spotify"        
+    },
+    
+    "scopes": ["user-top-read"]
+}
+

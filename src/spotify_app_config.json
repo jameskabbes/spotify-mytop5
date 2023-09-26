@@ -1,7 +1,0 @@
-{
-    "authEndpoint": "https://accounts.spotify.com/authorize",
-    "clientId": "0b5470071d61401e8a334fe58fc9bd90",
-    "redirectUri": "https://jameskabbes.github.io/spotify",
-    "scopes": ["user-top-read"]
-}
-
