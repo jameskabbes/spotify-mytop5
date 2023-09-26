@@ -1,14 +1,16 @@
 
 
-async function callApi( endpoint, headers={"Content-Type": "application/json"}, method="GET", body=null ){
-    const options = { method, headers, body }
+async function callApi( endpoint, token, method="GET" ){
 
     console.log('Calling API: ' + endpoint )
-    console.log(options)
+
+    const headers = {
+        "Authorization": `Bearer ${token}`
+    }
 
     const response = await fetch( 
         endpoint,
-        { method, headers, body }
+        { method, headers }
     );
 
     try{ 
