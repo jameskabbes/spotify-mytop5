@@ -1,6 +1,6 @@
-import { Artist } from './Artist/Artist';
+import { Artist } from '../Artist/Artist';
 
-function Song( {song, token} ){
+function Card( {song, token} ){
 
     return (
         <>
@@ -22,4 +22,4 @@ function Song( {song, token} ){
 
 }
 
-export { Song }
+export { Card }
