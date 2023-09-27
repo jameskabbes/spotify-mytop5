@@ -13,7 +13,7 @@ function ConnectToSpotify(){
     };
 
     return (
-        <div className='flex flex-col h-screen items-center justify-center'>
+        <div className='container-center'>
             <h1>My Top 10</h1>
             <button 
                 onClick={handleLoginClick}>

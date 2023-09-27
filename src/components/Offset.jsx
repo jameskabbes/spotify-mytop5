@@ -6,7 +6,7 @@ function Offset( {offset, setOffset} ) {
       };
 
     return (
-        <div className="flex flex-col items-center justify-center min-h-screen">
+        <div className="flex flex-col items-center justify-center">
             <h2>{offset}</h2>
             <input 
                 type="range" 

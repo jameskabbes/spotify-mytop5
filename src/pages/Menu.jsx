@@ -1,18 +1,10 @@
-import { createElement, useState } from "react"
-
-import { TopTracks } from "../components/Track/TopTracks"
-import { TopArtists } from "../components/Artist/TopArtists"
+import { useState } from "react"
 
 import { ArtistsOrTracks } from "../components/ArtistsOrTracks"
 import { Limit } from "../components/Limit";
-import { Offset } from "../components/Offset";
 import { TimeRange } from "../components/TimeRange";
 
-const types = {
-    'tracks': TopTracks,
-    'artists': TopArtists
-}
-
+import { Analytics } from './Analytics'
 
 function Menu( {token} ){
 
@@ -28,32 +20,36 @@ function Menu( {token} ){
         <>
             { !isSubmit ? (
                 <>
-                    <div className="flex flex-col items-center">
-                        <ArtistsOrTracks 
-                        type={type} 
-                        setType={setType}
-                        />
+                    <div className='container-center space-y-4'>
+
                         <Limit
                             limit={limit}
                             setLimit={setLimit}
                         />
-                        <Offset
-                            offset={offset}
-                            setOffset={setOffset}
+                        <ArtistsOrTracks 
+                        type={type} 
+                        setType={setType}
                         />
                         <TimeRange
                             timeRange={timeRange}
                             setTimeRange={setTimeRange}
                         />
                         <button
-                            className='bg-green-500 hover:bg-green-400 text-white font-bold py-2 px-6 rounded-full' 
+                            className="button"
                             onClick={ () => setIsSubmit(true) }
-                        >Generate</button>
+                        >Go!</button>
 
                     </div>
                 </>
             ) : (
-                createElement( types[type], { token, limit, offset, timeRange, setIsSubmit },  )
+                <Analytics
+                    type = {type}
+                    token = {token}
+                    limit = {limit}
+                    offset = {offset}
+                    timeRange = {timeRange}
+                    setIsSubmit = {setIsSubmit}
+                ></Analytics>
             ) }
 
         </>

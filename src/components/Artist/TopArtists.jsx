@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { callApi } from "../../utils/Api";
 import { Card } from './Card';
 
-function TopArtists( {token, limit, offset, timeRange, setIsSubmit} ){
+function TopArtists( {token, limit, offset, timeRange} ){
 
     console.log(token);
 
@@ -22,23 +22,16 @@ function TopArtists( {token, limit, offset, timeRange, setIsSubmit} ){
 
     return (
         <>
-            <div className="container mx-auto mt-8">
-                <div className="flex flex-wrap -mx-4">
-                    { !loading? (
-                    data.items.map( (artist, i) => (
-                        <Card 
-                            key={i} 
-                            artist={artist} 
-                            ranking={ i+1+offset }
-                        />
-                    ) )
-                    ) : null }
-
-                </div>
-
-                <button
-                    onClick={ () => setIsSubmit(false)}
-                >Try it again!</button>
+            <div className="flex flex-wrap -mx-4">
+                { !loading? (
+                data.items.map( (artist, i) => (
+                    <Card 
+                        key={i} 
+                        artist={artist} 
+                        ranking={ i+1+offset }
+                    />
+                ) )
+                ) : null }
 
             </div>
         </>
