@@ -12,6 +12,10 @@
     @apply mx-auto max-w-lg mt-8
 }
 
+.container-center{
+    @apply flex flex-col h-screen items-center justify-center
+}
+
 h1 {
     @apply mb-4 text-6xl font-extrabold
 }
@@ -38,22 +42,24 @@ h6{
 p {
 }
 
-button {
-    @apply button-base
+.button{
+    @apply button-base bg-green-500 hover:bg-green-400 text-white rounded-full 
 }
 
 .button-base{
-    @apply bg-green-500 hover:bg-green-400 text-white font-bold py-2 px-6 rounded-full 
+    @apply font-bold py-2 px-6 text-white
 }
 
-.button-primary{
-    @apply button-base border border-2 border-gray-600
+.menu-item{
+    @apply button-base rounded-md m-1
 }
 
-.button-secondary{
-    @apply  bg-gray-700 hover:bg-gray-600 text-green-400
+.menu-item-deselected{
+    @apply menu-item bg-gray-400
 }
-
+.menu-item-selected{
+    @apply menu-item bg-green-500
+}
 
 
 
