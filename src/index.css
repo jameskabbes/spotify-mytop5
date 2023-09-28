@@ -2,19 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.App {
-    @apply bg-gray-100;
-    min-width: 100vw;
-    min-height: 100vh;
-}
-
-.container {
-    @apply mx-auto max-w-lg mt-8
-}
-
-.container-center{
-    @apply flex flex-col h-screen items-center justify-center
-}
 
 h1 {
     @apply mb-4 text-6xl font-extrabold
@@ -40,6 +27,22 @@ h6{
 }
 
 p {
+}
+
+.App {
+    @apply bg-gray-100 min-h-screen;
+}
+
+.container {
+    @apply mx-auto max-w-lg mt-8
+}
+
+.container-center{
+    @apply flex flex-col h-screen items-center justify-center
+}
+
+.card{
+    @apply w-full md:w-1/2 lg:w-1/3 px-4 mb-8 bg-white rounded-lg p-6 shadow-lg
 }
 
 .button{
@@ -102,9 +105,15 @@ p {
 
 /* implement dark mode somehow*/
 @media (prefers-color-scheme: dark) {
-    .h1 {
-        @apply text-gray-500
+ 
+    .App {
+        @apply bg-gray-800 text-white; /* Adjust background and text colors for dark mode */
     }
-    
+    /* Add styles specific to dark mode */
+    /* For example, change card background color to dark gray */
+    .card {
+        @apply bg-gray-700;
+    }
+
 }
 
