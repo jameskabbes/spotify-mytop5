@@ -16,7 +16,9 @@ function ConnectToSpotify(){
         <div className='container-center'>
             <h1>My Top 10</h1>
             <button 
-                onClick={handleLoginClick}>
+                className='button'
+                onClick={handleLoginClick}
+            >                
                 Connect to Spotify
             </button>
         </div>

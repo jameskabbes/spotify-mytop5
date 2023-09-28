@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { createElement, useState } from "react"
 
 import { ArtistsOrTracks } from "../components/ArtistsOrTracks"
 import { Limit } from "../components/Limit";
@@ -42,14 +42,7 @@ function Menu( {token} ){
                     </div>
                 </>
             ) : (
-                <Analytics
-                    type = {type}
-                    token = {token}
-                    limit = {limit}
-                    offset = {offset}
-                    timeRange = {timeRange}
-                    setIsSubmit = {setIsSubmit}
-                ></Analytics>
+                createElement( Analytics, { type, token, limit, offset, timeRange, setIsSubmit } )
             ) }
 
         </>
