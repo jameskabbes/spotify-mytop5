@@ -43,7 +43,7 @@ function Analytics( {type, token, limit, offset, timeRange, setIsSubmit} ){
   
     return (
         <>
-            <div className='flex flex-col items-center p-8 space-y-4'>
+            <div className='flex flex-col items-center px-1 py-8 space-y-4'>
                 { !loading? (
                   <>
                     <div className="flex items-center space-x-2">
@@ -57,7 +57,7 @@ function Analytics( {type, token, limit, offset, timeRange, setIsSubmit} ){
                     <h3>My Top {limit}</h3>
                   </>
                 ) : null }  
-                <div className="flex flex-wrap">
+                <div className="cards">
                     { createElement( types[type], { data, userData, token, loading, offset } ) }
                 </div>
                 <button

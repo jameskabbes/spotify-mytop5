@@ -1,20 +1,21 @@
 import { Photo } from "./Photo"
+import { Card as BaseCard } from "../Card"
 
 function Card( {artist, ranking} ){
 
     return (
-        <div className="card">
-            <Photo
-                data={artist}
-                loading={false}
-            ></Photo>
-            <h3 className="text-xl font-semibold mb-2">{ranking}. {artist.name}</h3>
-            <p className="text-gray-700 mb-4">{artist.genres.join(' - ')}</p>
-            <p className="text-gray-700 mb-4">{artist.popularity}</p>
-        </div>
-
-        )
-
+        <BaseCard
+            photo={ 
+                <Photo
+                    data={artist}
+                    loading={false}
+                ></Photo>
+            }
+            number = {ranking}
+            title = {artist.name}
+            body={artist.popularity}
+        />
+    )
 }
 
 export { Card }

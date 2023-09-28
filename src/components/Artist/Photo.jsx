@@ -4,7 +4,10 @@ function Photo( {data, loading } ){
         loading ? (
             <p>loading...</p>
         ) : (
-            <img src={data.images[0].url} alt={data.name} className="w-full mb-4"/>
+            <img 
+                className="card-image"
+                src={data.images[0].url} alt={data.name} 
+            />
         )
     )
 }
