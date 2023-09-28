@@ -6,7 +6,7 @@ function Limit( {limit, setLimit} ) {
       };
 
     return (
-        <div className="flex flex-col text-center">
+        <div className="flex flex-col text-center items-center">
             <h1>{limit}</h1>
             <input 
                 type="range" 

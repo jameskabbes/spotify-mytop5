@@ -116,12 +116,12 @@ body, html, .App{
   }
   
   .slider::-webkit-slider-thumb {
+    @apply bg-spotify-green;
     -webkit-appearance: none;
     appearance: none;
     width: 16px;
     height: 16px;
     border-radius: 50%;
-    background: #555555;
     cursor: pointer;
   }
   
