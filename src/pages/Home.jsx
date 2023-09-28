@@ -1,40 +1,19 @@
-import { useState, useEffect } from 'react';
-import { ConnectToSpotify } from '../components/ConnectToSpotify';
-import { Menu } from './Menu';
+import { useState } from "react";
+import { ConnectToSpotify } from "./ConnectToSpotify";
+import { MyTop5 } from './MyTop5'
 
-function Home(){
+function Home(  ){
 
-    const [ token, setToken ] = useState(null)
-
-    useEffect(() => {
-        const handleHashChange = () => {
-            //#access_token={TOKEN}&token_type=Bearer&expires_in=3600
-            setToken(window.location.hash.slice( 1 ).split('&')[0].split('=')[1])
-        };
-    
-        // Attach the event listener for hash change
-        window.addEventListener('hashchange', handleHashChange);
-    
-        handleHashChange();
-
-        // Clean up the event listener when the component is unmounted
-        return () => {
-            window.removeEventListener('hashchange', handleHashChange);
-        };
-        }, []);
+    const [ token, setToken ] = useState( null );
 
     return (
-        <>
-            { !token ? (
-                <ConnectToSpotify></ConnectToSpotify>                
+        token ? (
+            <MyTop5 token={token} />
             ) : (
-                <Menu
-                    token={token}
-                ></Menu>
-            ) }
-        </>
+            <ConnectToSpotify setToken={setToken} />
+        )
     )
 
-}
+};
 
 export { Home }

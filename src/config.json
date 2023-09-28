@@ -7,7 +7,7 @@
     }, 
 
     "redirectUri": {
-        "dev": "http://localhost:5173",
+        "dev": "http://localhost:5173/spotify",
         "prod": "https://jameskabbes.github.io/spotify"        
     },
     

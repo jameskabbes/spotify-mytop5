@@ -6,7 +6,7 @@ import { TimeRange } from "../components/TimeRange";
 
 import { Analytics } from './Analytics'
 
-function Menu( {token} ){
+function MyTop5( {token} ){
 
     const [ isSubmit, setIsSubmit ] = useState(false)
 
@@ -14,6 +14,7 @@ function Menu( {token} ){
     const [ limit, setLimit ] = useState( 5 )
     const [ offset, setOffset ] = useState( 0 )
     const [ timeRange, setTimeRange ] = useState( 'long_term' )    
+
 
     return(
 
@@ -49,4 +50,4 @@ function Menu( {token} ){
         )
 }
 
-export { Menu }
+export { MyTop5 }
