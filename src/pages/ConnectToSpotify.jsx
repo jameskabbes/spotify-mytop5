@@ -34,14 +34,12 @@ function ConnectToSpotify( {setToken} ) {
         }, []);
 
     return (
-        <div className='container-center'>
-            <button 
-                className='button'
-                onClick={handleLoginClick}
-            >                
-                Connect to Spotify
-            </button>
-        </div>
+        <button 
+            className='button'
+            onClick={handleLoginClick}
+        >                
+            Connect to Spotify
+        </button>
     )
 }
 

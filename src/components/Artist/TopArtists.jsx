@@ -1,18 +1,20 @@
 import { Card } from './Card';
 
-function TopArtists( {data, loading, token, offset} ){
+function TopArtists( {data, userData, loading, token, offset} ){
 
 
     return (
         <>
             { !loading? (
-            data.items.map( (artist, i) => (
-                <Card 
-                    key={i} 
-                    artist={artist} 
-                    ranking={ i+1+offset }
-                />
-            ) )
+                <>
+                    {data.items.map( (artist, i) => (
+                        <Card 
+                            key={i} 
+                            artist={artist} 
+                            ranking={ i+1+offset }
+                        />
+                    ) )}
+                </>
             ) : null }
         </>
     )

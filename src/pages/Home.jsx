@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { ConnectToSpotify } from "./ConnectToSpotify";
-import { MyTop5 } from './MyTop5'
+import { Menu } from './Menu'
 
 function Home(  ){
 
@@ -8,9 +8,12 @@ function Home(  ){
 
     return (
         token ? (
-            <MyTop5 token={token} />
+            <Menu token={token} />
             ) : (
-            <ConnectToSpotify setToken={setToken} />
+            <div className="container-center">
+                <h1>My Top 5</h1>
+                <ConnectToSpotify setToken={setToken} />
+            </div>
         )
     )
 

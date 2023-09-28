@@ -1,6 +1,6 @@
 import { Card } from './Card';
 
-function TopTracks( {data, loading, token, offset} ) {
+function TopTracks( {data, user, loading, token, offset} ) {
 
     return (
         <>
