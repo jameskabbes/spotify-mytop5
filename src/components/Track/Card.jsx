@@ -11,7 +11,7 @@ function Card( {song, token, ranking} ){
                         token = {token}
                     ></Artist>
                     <h3 className="text-xl font-semibold mb-2">{ranking}. {song.name}</h3>
-                    <p className="text-gray-700 mb-4">{song.artists[0].name}</p>
+                    <p className="mb-4">{song.artists[0].name}</p>
             </div>
         </>
     )

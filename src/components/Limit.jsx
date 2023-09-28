@@ -6,8 +6,7 @@ function Limit( {limit, setLimit} ) {
       };
 
     return (
-        <div className="flex flex-col items-center justify-center py-6">
-            <h2>Top</h2>
+        <div className="flex flex-col text-center">
             <h1>{limit}</h1>
             <input 
                 type="range" 

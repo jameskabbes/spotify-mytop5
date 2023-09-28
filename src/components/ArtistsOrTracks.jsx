@@ -2,7 +2,7 @@ function ArtistsOrTracks( { type, setType } ) {
 
     return (
 
-    <div className="py-6" >
+    <div className="flex flex-col items-center" >
         <h1 
             className="text-center"
             >{ type === 'artists' ? 'Artists' : 'Tracks' }

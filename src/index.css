@@ -29,8 +29,16 @@ h6{
 p {
 }
 
+body, html, .App{
+    @apply bg-color
+}
+
+.bg-color{
+    @apply bg-gray-200    
+}
+
 .App {
-    @apply bg-gray-100 min-h-screen;
+    @apply min-h-screen;
 }
 
 .container {
@@ -46,7 +54,7 @@ p {
 }
 
 .button{
-    @apply button-base bg-green-500 hover:bg-green-400 text-white rounded-full 
+    @apply button-base bg-spotify-green hover:bg-spotify-green/80 text-white rounded-full 
 }
 
 .button-base{
@@ -58,21 +66,20 @@ p {
 }
 
 .menu-item-deselected{
-    @apply menu-item bg-gray-400
+    @apply menu-item bg-gray-400 hover:bg-gray-400/80
 }
 .menu-item-selected{
-    @apply menu-item bg-green-500
+    @apply menu-item bg-spotify-green
 }
-
 
 
 .slider {
     -webkit-appearance: none;
     width: 100%;
-    height: 2px;
+    height: 4px;
     border-radius: 5px;
-    background: linear-gradient(to right, #1db954 0%, #1db954 100%);
-    outline: none;
+    background: linear-gradient(to right, bg-spotify-green 0%, bg-spotify-green 100%);
+    outline: 0;
     opacity: 0.7;
     -webkit-transition: .2s;
     transition: opacity .2s;
@@ -106,11 +113,14 @@ p {
 /* implement dark mode somehow*/
 @media (prefers-color-scheme: dark) {
  
-    .App {
-        @apply bg-gray-800 text-white; /* Adjust background and text colors for dark mode */
+    .bg-color {
+        @apply bg-gray-800
     }
-    /* Add styles specific to dark mode */
-    /* For example, change card background color to dark gray */
+
+    .App {
+        @apply text-white; 
+    }
+
     .card {
         @apply bg-gray-700;
     }
