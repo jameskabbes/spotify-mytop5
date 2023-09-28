@@ -12,8 +12,8 @@ function Card( {song, token, ranking} ){
                 token = {token}
                 ></Artist>
             }
-            number = {ranking}
-            title = {song.name}
+            number={ranking}
+            title={song.name}
             body={song.artists[0].name}
         />
     )

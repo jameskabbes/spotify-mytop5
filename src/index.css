@@ -49,19 +49,37 @@ body, html, .App{
     @apply flex flex-col h-screen items-center justify-center
 }
 
+  
+  .grid-item {
+    /* Add styles for the grid items */
+    flex: 1; /* Equal flex distribution to all items */
+    max-width: calc(50% - 0.5rem); /* Two columns, considering gap */
+    padding: 1rem;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+  }
+
+.cards{
+    @apply flex flex-wrap
+}
+
 .card{
-    @apply flex flex-col space-y-2 w-1/2 md:w-1/3 lg:w-1/4 p-4 my-2 bg-white rounded-lg shadow-lg
+    @apply w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5;
+}
+.card-content{
+    @apply space-y-2 m-2 p-3 rounded-lg shadow-lg bg-white
 }
 
 .card-image-container{
-    @apply relative
-}
-.card-image{
-    @apply object-cover
+    @apply relative w-full aspect-square
 }
 
-.cards{
-    @apply flex flex-wrap items-center
+.card-image{
+    @apply absolute inset-0 w-full h-full object-cover
+}
+
+.card-body{
+    @apply h-48
 }
 
 .button{
@@ -132,8 +150,8 @@ body, html, .App{
         @apply text-white; 
     }
 
-    .card {
-        @apply bg-gray-700;
+    .card-content {
+        @apply bg-gray-600;
     }
 
 }

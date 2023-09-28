@@ -3,6 +3,8 @@ import { Card as BaseCard } from "../Card"
 
 function Card( {artist, ranking} ){
 
+    //body={'Popularity: ' + artist.popularity}
+
     return (
         <BaseCard
             photo={ 
@@ -13,7 +15,6 @@ function Card( {artist, ranking} ){
             }
             number = {ranking}
             title = {artist.name}
-            body={artist.popularity}
         />
     )
 }
