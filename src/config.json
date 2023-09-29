@@ -7,8 +7,8 @@
     }, 
 
     "redirectUri": {
-        "dev": "http://localhost:5173/spotify",
-        "prod": "https://jameskabbes.github.io/spotify"        
+        "dev": "http://localhost:5173/spotify-mytop5",
+        "prod": "https://jameskabbes.github.io/spotify-mytop5"        
     },
     
     "scopes": ["user-top-read"]

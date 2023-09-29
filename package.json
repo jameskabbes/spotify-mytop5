@@ -2,7 +2,7 @@
   "name": "frontend",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://jameskabbes.github.io/spotify",
+  "homepage": "https://jameskabbes.github.io/spotify-mytop5",
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",

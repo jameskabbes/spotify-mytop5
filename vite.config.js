@@ -7,7 +7,7 @@ export default defineConfig({
   server: {
     host: true
   },
-  base: '/spotify', 
+  base: '/spotify-mytop5', 
   plugins: [react(), tailwindcss('./tailwind.config.js')],
 })
 
