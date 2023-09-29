@@ -1,17 +1,14 @@
+import { createElement } from "react"
 import { Card } from './Card';
+import { Panel } from './Panel';
 
-function TopTracks( {data, user, loading, token, offset} ) {
+function TopTracks( {data, user, loading, token, offset, smallScreen} ) {
 
     return (
         <>
             { !loading? (
-            data.items.map( (song, i) => (
-                <Card 
-                    key={i} 
-                    song={song} 
-                    token={token}
-                    ranking={ i+1+offset }
-                />
+            data.items.map( (track, i) => (
+                createElement( smallScreen ? Panel : Card, { key:i, track, ranking:i+1+offset } )
             ) )
             ) : null }
         </>

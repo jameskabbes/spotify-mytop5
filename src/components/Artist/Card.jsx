@@ -14,10 +14,10 @@ function Card( {artist, ranking} ){
                 ></Photo>
             }
             body={
-                <div className='card-body'>
+                <>
                     <h1>{ranking}</h1>
                     <h2>{artist.name}</h2>
-                </div>                
+                </>
             }
         />
     )

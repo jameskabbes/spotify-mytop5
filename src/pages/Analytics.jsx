@@ -17,6 +17,7 @@ function Analytics( {type, token, limit, offset, timeRange, setIsSubmit} ){
     const [userData, setUserData] = useState(null);
     const [loading, setLoading] = useState(true);
 
+    const [smallScreen, setSmallScreen] = useState(window.innerWidth < 640);
     
     const fetchData = async () => {
       const url1 = `https://api.spotify.com/v1/me/top/${type}/?time_range=${timeRange}&limit=${limit}&offset=${offset}`;
@@ -38,8 +39,23 @@ function Analytics( {type, token, limit, offset, timeRange, setIsSubmit} ){
       }
     };
   
+
+  
+
     useEffect(() => {
+
       fetchData();
+
+      const handleResize = () => {
+        setSmallScreen(window.innerWidth < 640);
+      };
+  
+      window.addEventListener('resize', handleResize);
+  
+      return () => {
+        window.removeEventListener('resize', handleResize);
+      };
+
     }, []); // Empty dependency array to run only once when component mounts
   
     return (
@@ -58,8 +74,8 @@ function Analytics( {type, token, limit, offset, timeRange, setIsSubmit} ){
                     <h3>My Top {limit}</h3>
                   </>
                 ) : null }  
-                <div className="cards">
-                    { createElement( types[type], { data, userData, token, loading, offset } ) }
+                <div className='cards'>
+                    { createElement( types[type], { data, userData, token, loading, offset, smallScreen } ) }
                 </div>
                 <button
                     className='button p-8'

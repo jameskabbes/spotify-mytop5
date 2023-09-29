@@ -1,4 +1,4 @@
-function Photo( {data, loading } ){
+function Photo( {artist, loading } ){
 
     return (
         loading ? (
@@ -6,7 +6,7 @@ function Photo( {data, loading } ){
         ) : (
             <img 
                 className="card-image"
-                src={data.images[0].url} alt={data.name} 
+                src={artist.images[0].url} alt={artist.name} 
             />
         )
     )

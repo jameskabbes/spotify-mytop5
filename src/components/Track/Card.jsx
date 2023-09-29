@@ -1,20 +1,20 @@
 import { Photo } from '../Album/Photo';
 import { Card as BaseCard } from "../Card"
 
-function Card( {song, token, ranking} ){
+function Card( {track, token, ranking} ){
 
     return (
         <BaseCard
             photo= {<Photo
-                album={song.album}
+                album={track.album}
             />}
             body={
-                <div className='card-body'>
+                <>
                     <h1>{ranking}</h1>
-                    <h2>{song.name}</h2>
-                    <h4>{song.artists[0].name}</h4>
-                    <h5>{song.album.name}</h5>
-                </div>                
+                    <h2>{track.name}</h2>
+                    <h4>{track.artists[0].name}</h4>
+                    <h5>{track.album.name}</h5>
+                </>
             }
         />
     )

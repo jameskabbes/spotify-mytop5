@@ -6,7 +6,9 @@ function Card( {photo, body} ){
                 <div className="card-image-container">
                     {photo}
                 </div>
-                { body }
+                <div className="card-body">
+                    { body }
+                </div>
             </div>
 
     )
