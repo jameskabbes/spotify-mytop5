@@ -5,23 +5,25 @@ function TimeRange( {timeRange, setTimeRange} ) {
         <div className="flex flex-col items-center">
         <h2 
             className="text-center"
-            >of { timeRange === 'long_term' ? 'All Time' : timeRange === 'medium_term' ? 'Last 6 Months' : 'Last 4 Weeks' }
+            >of { timeRange === 'long_term' ? 'all time' : timeRange === 'medium_term' ? 'the last 6 months' : 'the last 4 weeks' }
         </h2>
-        <button 
-            onClick={() => setTimeRange('long_term')}
-            className={ timeRange === 'long_term' ? 'menu-item-selected' : 'menu-item-deselected' }
-            >All Time
-        </button>
-        <button 
-            onClick={() => setTimeRange('medium_term')}
-            className={ timeRange === 'medium_term' ? 'menu-item-selected' : 'menu-item-deselected' }
-            >6 Months
-        </button>
-        <button 
-            onClick={() => setTimeRange('short_term')}
-            className={ timeRange === 'short_term' ? 'menu-item-selected' : 'menu-item-deselected' }
-            >4 Weeks
-        </button>
+        <div className="">
+            <button 
+                onClick={() => setTimeRange('long_term')}
+                className={ timeRange === 'long_term' ? 'menu-item-selected' : 'menu-item-deselected' }
+                >All Time
+            </button>
+            <button 
+                onClick={() => setTimeRange('medium_term')}
+                className={ timeRange === 'medium_term' ? 'menu-item-selected' : 'menu-item-deselected' }
+                >6 Months
+            </button>
+            <button 
+                onClick={() => setTimeRange('short_term')}
+                className={ timeRange === 'short_term' ? 'menu-item-selected' : 'menu-item-deselected' }
+                >4 Weeks
+            </button>
+        </div>
         </div>
 
     )
