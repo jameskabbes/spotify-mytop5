@@ -14,7 +14,7 @@ function Panel( {artist, ranking} ){
             body={
                 <>
                     <h2 className="m-0">{ranking}</h2>
-                    <h4 className="m-0 text-right">{artist.name}</h4>
+                    <h5 className="m-0 font-semibold text-right">{artist.name}</h5>
                 </>
             }
         />

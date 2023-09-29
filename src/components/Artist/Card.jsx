@@ -9,7 +9,7 @@ function Card( {artist, ranking} ){
         <BaseCard
             photo={ 
                 <Photo
-                    data={artist}
+                    artist={artist}
                     loading={false}
                 ></Photo>
             }
