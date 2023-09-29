@@ -1,3 +1,3 @@
-# spotify
+# My Top 5
 
-[https://jameskabbes.github.io/spotify]
+[https://jameskabbes.github.io/spotify-mytop5]
