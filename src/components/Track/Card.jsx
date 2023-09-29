@@ -1,13 +1,12 @@
-import { Artist } from '../Artist/Artist';
+import { Photo } from '../Album/Photo';
 import { Card as BaseCard } from "../Card"
 
 function Card( {song, token, ranking} ){
 
     return (
         <BaseCard
-            photo={<img
-                className="card-image"
-                src={song.album.images[0].url} alt={song.album.name} 
+            photo= {<Photo
+                album={song.album}
             />}
             body={
                 <div className='card-body'>

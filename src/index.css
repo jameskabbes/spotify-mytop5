@@ -78,6 +78,10 @@ body, html, .App{
 .card-body{
 }
 
+.panel{
+    
+}
+
 .button{
     @apply button-base bg-spotify-green hover:bg-spotify-green/80 text-white rounded-full 
 }
