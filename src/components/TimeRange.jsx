@@ -7,7 +7,7 @@ function TimeRange( {timeRange, setTimeRange} ) {
             className="text-center"
             >of { timeRange === 'long_term' ? 'all time' : timeRange === 'medium_term' ? 'the last 6 months' : 'the last 4 weeks' }
         </h2>
-        <div className="">
+        <div className="text-center">
             <button 
                 onClick={() => setTimeRange('long_term')}
                 className={ timeRange === 'long_term' ? 'menu-item-selected' : 'menu-item-deselected' }

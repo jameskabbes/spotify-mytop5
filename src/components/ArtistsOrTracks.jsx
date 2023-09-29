@@ -7,7 +7,7 @@ function ArtistsOrTracks( { type, setType } ) {
             className="text-center"
             >{ type === 'artists' ? 'Artists' : 'Tracks' }
         </h1>
-        <div className="" >
+        <div className="text-center" >
             <button 
                 onClick={() => setType('artists')}
                 className={ type === 'artists' ? 'menu-item-selected' : 'menu-item-deselected' }

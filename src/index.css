@@ -79,7 +79,7 @@ body, html, .App{
 }
 
 .panel{
-    @apply flex space-x-2 flex-1 p-2 m-2 rounded-lg shadow-lg bg-white
+    @apply flex space-x-2 flex-1 p-2 m-1 rounded-lg shadow-lg bg-white
 }
 
 .panel-image-container{
