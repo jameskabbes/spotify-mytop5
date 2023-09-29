@@ -13,8 +13,12 @@ function Card( {artist, ranking} ){
                     loading={false}
                 ></Photo>
             }
-            number = {ranking}
-            title = {artist.name}
+            body={
+                <div className='card-body'>
+                    <h1>{ranking}</h1>
+                    <h2>{artist.name}</h2>
+                </div>                
+            }
         />
     )
 }

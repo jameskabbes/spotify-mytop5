@@ -10,7 +10,7 @@ function Home(  ){
         token ? (
             <Menu token={token} />
             ) : (
-            <div className="container-center">
+            <div className="container-center space-y-2">
                 <h1>My Top 5</h1>
                 <ConnectToSpotify setToken={setToken} />
             </div>

@@ -16,7 +16,8 @@ function Analytics( {type, token, limit, offset, timeRange, setIsSubmit} ){
     const [data, setData] = useState(null);
     const [userData, setUserData] = useState(null);
     const [loading, setLoading] = useState(true);
-  
+
+    
     const fetchData = async () => {
       const url1 = `https://api.spotify.com/v1/me/top/${type}/?time_range=${timeRange}&limit=${limit}&offset=${offset}`;
       const url2 = `https://api.spotify.com/v1/me`;

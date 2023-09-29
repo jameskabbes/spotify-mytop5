@@ -60,14 +60,11 @@ body, html, .App{
   }
 
 .cards{
-    @apply flex flex-wrap
+    @apply grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-0
 }
 
 .card{
-    @apply w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/5;
-}
-.card-content{
-    @apply space-y-2 m-2 p-3 rounded-lg shadow-lg bg-white
+    @apply flex flex-col space-y-2 m-1 p-3 rounded-lg shadow-lg bg-white
 }
 
 .card-image-container{
@@ -79,7 +76,6 @@ body, html, .App{
 }
 
 .card-body{
-    @apply h-48
 }
 
 .button{
@@ -150,7 +146,7 @@ body, html, .App{
         @apply text-white; 
     }
 
-    .card-content {
+    .card {
         @apply bg-gray-600;
     }
 
