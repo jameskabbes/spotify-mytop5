@@ -1,13 +1,9 @@
-function Photo( {album} ){
-
-    return (
-        <>
-            <img 
-                className="card-image"
-                src={album.images[0].url} alt={album.name} 
-            />
-        </>
-    )
+function Photo({ album }) {
+  return (
+    <>
+      <img className="card-image" src={album.images[0].url} alt={album.name} />
+    </>
+  );
 }
 
-export { Photo }
+export { Photo };

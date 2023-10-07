@@ -2,165 +2,164 @@
 @tailwind components;
 @tailwind utilities;
 
-
 h1 {
-    @apply mb-4 text-6xl font-extrabold
+  @apply mb-4 text-6xl font-extrabold;
 }
 
 h2 {
-    @apply mb-4 text-4xl font-bold
+  @apply mb-4 text-4xl font-bold;
 }
 
-h3{
-    @apply mb-3 text-3xl font-semibold 
+h3 {
+  @apply mb-3 text-3xl font-semibold;
 }
 
-h4{
-    @apply mb-3 text-2xl 
+h4 {
+  @apply mb-3 text-2xl;
 }
 
-h5{
-    @apply mb-2 text-xl 
+h5 {
+  @apply mb-2 text-xl;
 }
-h6{
-    @apply mb-1 text-lg 
+h6 {
+  @apply mb-1 text-lg;
 }
 
 p {
 }
 
-body, html, .App{
-    @apply bg-color
+body,
+html,
+.App {
+  @apply bg-color;
 }
 
-.bg-color{
-    @apply bg-gray-200    
+.bg-color {
+  @apply bg-gray-200;
 }
 
 .App {
-    @apply min-h-screen;
+  @apply min-h-screen;
 }
 
 .container {
-    @apply mx-auto max-w-lg mt-8
+  @apply mx-auto max-w-lg mt-8;
 }
 
-.container-center{
-    @apply flex flex-col h-screen items-center justify-center
+.container-center {
+  @apply flex flex-col h-screen items-center justify-center;
 }
 
-  
-  .grid-item {
-    /* Add styles for the grid items */
-    flex: 1; /* Equal flex distribution to all items */
-    max-width: calc(50% - 0.5rem); /* Two columns, considering gap */
-    padding: 1rem;
-    background-color: #f0f0f0;
-    border: 1px solid #ccc;
-  }
-
-.cards{
-    @apply w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-0
+.grid-item {
+  /* Add styles for the grid items */
+  flex: 1; /* Equal flex distribution to all items */
+  max-width: calc(50% - 0.5rem); /* Two columns, considering gap */
+  padding: 1rem;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
 }
 
-.card{
-    @apply flex flex-col space-y-2 m-1 p-3 rounded-lg shadow-lg bg-white
+.cards {
+  @apply w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-0;
 }
 
-.card-image-container{
-    @apply relative w-full aspect-square
+.card {
+  @apply flex flex-col space-y-2 m-1 p-3 rounded-lg shadow-lg bg-white;
 }
 
-.card-image{
-    @apply absolute inset-0 w-full h-full object-cover
+.card-image-container {
+  @apply relative w-full aspect-square;
 }
 
-.card-body{
+.card-image {
+  @apply absolute inset-0 w-full h-full object-cover;
 }
 
-.panel{
-    @apply flex space-x-2 flex-1 p-2 m-1 rounded-lg shadow-lg bg-white
+.card-body {
 }
 
-.panel-image-container{
-    @apply relative w-1/4 aspect-square
+.panel {
+  @apply flex space-x-2 flex-1 p-2 m-1 rounded-lg shadow-lg bg-white;
 }
 
-.panel-body{
-    @apply flex flex-row w-3/4 items-center space-x-2 justify-between
+.panel-image-container {
+  @apply relative w-1/4 aspect-square;
 }
 
-.button{
-    @apply button-base bg-spotify-green hover:bg-spotify-green/80 text-white rounded-full 
+.panel-body {
+  @apply flex flex-row w-3/4 items-center space-x-2 justify-between;
 }
 
-.button-base{
-    @apply font-bold py-2 px-6 text-white
+.button {
+  @apply button-base bg-spotify-green hover:bg-spotify-green/80 text-white rounded-full;
 }
 
-.menu-item{
-    @apply button-base rounded-md m-1
+.button-base {
+  @apply font-bold py-2 px-6 text-white;
 }
 
-.menu-item-deselected{
-    @apply menu-item bg-gray-400 hover:bg-gray-400/80
-}
-.menu-item-selected{
-    @apply menu-item bg-spotify-green
+.menu-item {
+  @apply button-base rounded-md m-1;
 }
 
+.menu-item-deselected {
+  @apply menu-item bg-gray-400 hover:bg-gray-400/80;
+}
+.menu-item-selected {
+  @apply menu-item bg-spotify-green;
+}
 
 .slider {
-    -webkit-appearance: none;
-    width: 100%;
-    height: 4px;
-    border-radius: 5px;
-    background: linear-gradient(to right, bg-spotify-green 0%, bg-spotify-green 100%);
-    outline: 0;
-    opacity: 0.7;
-    -webkit-transition: .2s;
-    transition: opacity .2s;
-    margin: 0 10px;
-  }
-  
-  .slider::-webkit-slider-thumb {
-    @apply bg-spotify-green;
-    -webkit-appearance: none;
-    appearance: none;
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    cursor: pointer;
-  }
-  
-  .slider::-moz-range-thumb {
-    width: 16px;
-    height: 16;
-    border-radius: 50%;
-    background: #cccccc;
-    cursor: pointer;
-  }
-  
-  .slider:focus {
-    opacity: 1;
-  }
+  -webkit-appearance: none;
+  width: 100%;
+  height: 4px;
+  border-radius: 5px;
+  background: linear-gradient(
+    to right,
+    bg-spotify-green 0%,
+    bg-spotify-green 100%
+  );
+  outline: 0;
+  opacity: 0.7;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+  margin: 0 10px;
+}
 
+.slider::-webkit-slider-thumb {
+  @apply bg-spotify-green;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  cursor: pointer;
+}
 
+.slider::-moz-range-thumb {
+  width: 16px;
+  height: 16;
+  border-radius: 50%;
+  background: #cccccc;
+  cursor: pointer;
+}
+
+.slider:focus {
+  opacity: 1;
+}
 
 /* implement dark mode somehow*/
 @media (prefers-color-scheme: dark) {
- 
-    .bg-color {
-        @apply bg-gray-800
-    }
+  .bg-color {
+    @apply bg-gray-800;
+  }
 
-    .App {
-        @apply text-white; 
-    }
+  .App {
+    @apply text-white;
+  }
 
-    .card, .panel {
-        @apply bg-gray-600;
-    }
-
+  .card,
+  .panel {
+    @apply bg-gray-600;
+  }
 }
-

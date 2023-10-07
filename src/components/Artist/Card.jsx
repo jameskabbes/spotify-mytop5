@@ -1,26 +1,20 @@
-import { Photo } from "./Photo"
-import { Card as BaseCard } from "../Card"
+import { Photo } from './Photo';
+import { Card as BaseCard } from '../Card';
 
-function Card( {artist, ranking} ){
+function Card({ artist, ranking }) {
+  //body={'Popularity: ' + artist.popularity}
 
-    //body={'Popularity: ' + artist.popularity}
-
-    return (
-        <BaseCard
-            photo={ 
-                <Photo
-                    artist={artist}
-                    loading={false}
-                ></Photo>
-            }
-            body={
-                <>
-                    <h1>{ranking}</h1>
-                    <h2>{artist.name}</h2>
-                </>
-            }
-        />
-    )
+  return (
+    <BaseCard
+      photo={<Photo artist={artist} loading={false}></Photo>}
+      body={
+        <>
+          <h1>{ranking}</h1>
+          <h2>{artist.name}</h2>
+        </>
+      }
+    />
+  );
 }
 
-export { Card }
+export { Card };

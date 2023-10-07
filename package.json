@@ -9,7 +9,8 @@
     "deploy": "gh-pages -d dist",
     "dev": "JAMESKABBES_DEV=true vite",
     "build": "vite build",
-    "start": "vite preview"
+    "start": "vite preview",
+    "format": "npx prettier --write ."
   },
   "dependencies": {
     "autoprefixer": "^10.4.16",
@@ -28,6 +29,7 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.3",
     "gh-pages": "^6.0.0",
+    "prettier": "3.0.3",
     "vite": "^4.4.5"
   }
 }
