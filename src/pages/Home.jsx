@@ -11,7 +11,14 @@ function Home() {
     <div className="container-center space-y-2">
       <h1 className="text-center">My Top 5</h1>
       <ConnectToSpotify setToken={setToken} />
-      <button className="button">Use Demo Data</button>
+      <button
+        className="button"
+        onClick={() => {
+          setToken('demo');
+        }}
+      >
+        Use Demo Data
+      </button>
     </div>
   );
 }
