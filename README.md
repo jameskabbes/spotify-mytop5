@@ -2,6 +2,6 @@
 
 This is a React Application built on the Spotify API to show any Spotify User their your top 5 (or any number) artists and tracks.
 
-## In Development
+## Use Demo Data
 
-Currently, the application token is in development mode. Spotify must approve the token for production to give access to the general public.
+Until this application is approved by spotify, users will need to Use Demo Data
