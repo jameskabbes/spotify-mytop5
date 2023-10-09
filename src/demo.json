@@ -1,5 +1,5 @@
 {
-  "artists": [
+  "artist": [
     {
       "external_urls": {
         "spotify": "https://open.spotify.com/artist/3TVXtAsR1Inumwj472S9r4"
@@ -1570,7 +1570,7 @@
       "uri": "spotify:artist:26VFTg2z8YR0cCuwLzESi2"
     }
   ],
-  "tracks": [
+  "track": [
     {
       "album": {
         "album_type": "album",

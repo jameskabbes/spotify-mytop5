@@ -2,21 +2,21 @@ function ArtistsOrTracks({ type, setType }) {
   return (
     <div className="flex flex-col items-center">
       <h1 className="text-center">
-        {type === 'artists' ? 'Artists' : 'Tracks'}
+        {type === 'artist' ? 'Artists' : 'Tracks'}
       </h1>
       <div className="text-center">
         <button
-          onClick={() => setType('artists')}
+          onClick={() => setType('artist')}
           className={
-            type === 'artists' ? 'menu-item-selected' : 'menu-item-deselected'
+            type === 'artist' ? 'menu-item-selected' : 'menu-item-deselected'
           }
         >
           Artists
         </button>
         <button
-          onClick={() => setType('tracks')}
+          onClick={() => setType('track')}
           className={
-            type === 'tracks' ? 'menu-item-selected' : 'menu-item-deselected'
+            type === 'track' ? 'menu-item-selected' : 'menu-item-deselected'
           }
         >
           Tracks

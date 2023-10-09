@@ -9,7 +9,7 @@ import { Analytics } from './Analytics';
 function Menu({ token }) {
   const [isSubmit, setIsSubmit] = useState(false);
 
-  const [type, setType] = useState('artists');
+  const [type, setType] = useState('artist');
   const [limit, setLimit] = useState(5);
   const [offset, setOffset] = useState(0);
   const [timeRange, setTimeRange] = useState('long_term');
