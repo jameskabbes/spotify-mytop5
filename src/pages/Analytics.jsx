@@ -4,6 +4,8 @@ import { callApi } from '../utils/Api';
 import { TopTracks } from '../components/Track/TopTracks';
 import { TopArtists } from '../components/Artist/TopArtists';
 
+import demo_data from '../demo.json'
+
 import spotifyIcon from '../images/Spotify_Icon_RGB_Green.png';
 
 const types = {
@@ -18,7 +20,7 @@ function Analytics({ type, token, limit, offset, timeRange, setIsSubmit }) {
 
   const [smallScreen, setSmallScreen] = useState(window.innerWidth < 640);
 
-  const fetchData = async () => {
+  const fetchApiData = async () => {
     const url1 = `https://api.spotify.com/v1/me/top/${type}/?time_range=${timeRange}&limit=${limit}&offset=${offset}`;
     const url2 = `https://api.spotify.com/v1/me`;
 
@@ -37,8 +39,19 @@ function Analytics({ type, token, limit, offset, timeRange, setIsSubmit }) {
     }
   };
 
+  const fetchDemoData = () => {
+    setUserData( { 'display_name': 'demo' } );
+    setData({ 'items': demo_data[ type ].slice( 0, limit)  });
+    setLoading(false);
+  };
+
   useEffect(() => {
-    fetchData();
+
+    if (token === 'demo') {
+      fetchDemoData();
+    } else {
+      fetchApiData();
+    }
 
     const handleResize = () => {
       setSmallScreen(window.innerWidth < 640);
