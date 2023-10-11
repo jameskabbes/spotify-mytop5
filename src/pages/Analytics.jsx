@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { callApi } from '../utils/Api';
 import { Cards } from '../components/Cards';
-import demo_data from '../demo.json'
+import demo_data from '../demo.json';
 import spotifyIcon from '../images/Spotify_Icon_RGB_Green.png';
 
 function Analytics({ type, token, limit, offset, timeRange, setIsSubmit }) {
@@ -29,8 +29,8 @@ function Analytics({ type, token, limit, offset, timeRange, setIsSubmit }) {
   };
 
   const fetchDemoData = () => {
-    setUserData( { 'display_name': 'demo' } );
-    setData({ 'items': demo_data[ type ].slice( 0, limit)  });
+    setUserData({ display_name: 'demo' });
+    setData({ items: demo_data[type].slice(0, limit) });
     setLoading(false);
   };
 
@@ -57,16 +57,12 @@ function Analytics({ type, token, limit, offset, timeRange, setIsSubmit }) {
               <h2 className="m-0">{userData.display_name}</h2>
             </div>
             <h3>My Top {limit}</h3>
-            <Cards
-              data={data}
-              type={type}
-              offset={offset}
-            />
+            <Cards data={data} type={type} offset={offset} />
             <button className="button p-8" onClick={() => setIsSubmit(false)}>
               Try it again!
             </button>
           </>
-          ) : null}
+        ) : null}
       </div>
     </>
   );
