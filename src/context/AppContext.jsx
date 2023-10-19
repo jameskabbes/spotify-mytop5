@@ -1,7 +1,14 @@
 import { TokenContextProvider } from './TokenContext';
+import { EntityContextProvider } from './EntityContext';
 
 function AppContextProvider({ children }) {
-  return <TokenContextProvider>{children}</TokenContextProvider>;
+  return (
+	<TokenContextProvider>
+		<EntityContextProvider>
+			{children}
+		</EntityContextProvider>
+	</TokenContextProvider>
+  );
 }
 
 export { AppContextProvider };

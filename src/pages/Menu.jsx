@@ -1,9 +1,9 @@
 import { useContext, createElement, useState } from 'react';
 import { TokenContext } from '../context/TokenContext';
 
-import { ArtistsOrTracks } from '../components/ArtistsOrTracks';
-import { Limit } from '../components/Limit';
-import { TimeRange } from '../components/TimeRange';
+import { Entity } from '../components/Menu/Entity';
+import { Limit } from '../components/Menu/Limit';
+import { TimeRange } from '../components/Menu/TimeRange';
 
 import { Analytics } from './Analytics';
 
@@ -25,7 +25,7 @@ function Menu() {
             <h2>My Top</h2>
 
             <Limit limit={limit} setLimit={setLimit} />
-            <ArtistsOrTracks type={type} setType={setType} />
+            <Entity type={type} setType={setType} />
             <TimeRange timeRange={timeRange} setTimeRange={setTimeRange} />
             <button className="button" onClick={() => setIsSubmit(true)}>
               Go!
