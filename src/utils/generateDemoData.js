@@ -1,7 +1,6 @@
 import demoData from '../demo.json';
 
 function generateDemoData(entity, limit) {
-
   // Copy the original list to avoid modifying it
   const copyList = [...demoData[entity]];
 

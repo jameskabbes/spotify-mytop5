@@ -18,9 +18,9 @@ function Menu() {
           <div className="container-center space-y-4">
             <h2>My Top</h2>
 
-            <Limit/>
-            <Entity/>
-            <TimeRange/>
+            <Limit />
+            <Entity />
+            <TimeRange />
             <button className="button" onClick={() => setIsSubmit(true)}>
               Go!
             </button>
@@ -31,7 +31,7 @@ function Menu() {
         </>
       ) : (
         createElement(Analytics, {
-          setIsSubmit
+          setIsSubmit,
         })
       )}
     </>

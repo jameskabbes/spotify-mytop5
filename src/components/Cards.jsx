@@ -32,7 +32,10 @@ function Cards({ data, entity }) {
           ranking: i + 1,
         };
         props[entity] = item; // Assuming type is defined somewhere
-        return createElement(entities[entity][isMobile ? 'card' : 'panel'], props); // Return the created element
+        return createElement(
+          entities[entity][isMobile ? 'card' : 'panel'],
+          props
+        ); // Return the created element
       })}
     </div>
   );

@@ -2,7 +2,6 @@ import { useContext } from 'react';
 import { EntityContext } from '../../context/EntityContext';
 
 function Entity() {
-
   const { entity, setEntity } = useContext(EntityContext);
 
   return (

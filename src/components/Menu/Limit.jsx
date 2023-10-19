@@ -1,9 +1,7 @@
 import { useContext } from 'react';
 import { LimitContext } from '../../context/LimitContext';
 
-
 function Limit() {
-
   const { limit, setLimit } = useContext(LimitContext);
   const handleChange = (event) => {
     const newValue = event.target.value;

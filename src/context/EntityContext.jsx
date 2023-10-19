@@ -5,7 +5,7 @@ const EntityContext = createContext();
 
 function EntityContextProvider({ children }) {
   const [entity, setEntity] = useState('artist');
-  	
+
   return (
     <EntityContext.Provider value={{ entity, setEntity }}>
       {children}

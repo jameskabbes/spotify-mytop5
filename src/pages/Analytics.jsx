@@ -38,7 +38,7 @@ function Analytics({ setIsSubmit }) {
               <h2 className="m-0">{userData.display_name}</h2>
             </div>
             <h3>My Top {limit}</h3>
-            <Cards data={data} entity={entity}/>
+            <Cards data={data} entity={entity} />
             <button className="button p-8" onClick={() => setIsSubmit(false)}>
               Try it again!
             </button>
