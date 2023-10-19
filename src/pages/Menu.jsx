@@ -31,8 +31,8 @@ function Menu({ token }) {
         </>
       ) : (
         createElement(Analytics, {
-          type,
           token,
+          type,
           limit,
           offset,
           timeRange,

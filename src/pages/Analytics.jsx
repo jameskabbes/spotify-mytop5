@@ -1,45 +1,18 @@
-import { useState, useEffect } from 'react';
-import { callApi } from '../utils/Api';
 import { Cards } from '../components/Cards';
-import demo_data from '../demo.json';
 import spotifyIcon from '../images/Spotify_Icon_RGB_Green.png';
+import { useSpotifyData } from '../utils/useSpotifyData';
+import { useEffect } from 'react';
 
-function Analytics({ type, token, limit, offset, timeRange, setIsSubmit }) {
-  const [data, setData] = useState(null);
-  const [userData, setUserData] = useState(null);
-  const [loading, setLoading] = useState(true);
-
-  const fetchApiData = async () => {
-    const url1 = `https://api.spotify.com/v1/me/top/${type}s/?time_range=${timeRange}&limit=${limit}&offset=${offset}`;
-    const url2 = `https://api.spotify.com/v1/me`;
-
-    try {
-      const [dataResponse, userDataResponse] = await Promise.all([
-        callApi(url1, token),
-        callApi(url2, token),
-      ]);
-
-      setData(dataResponse);
-      setUserData(userDataResponse);
-    } catch (error) {
-      console.error('Error fetching data:', error);
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  const fetchDemoData = () => {
-    setUserData({ display_name: 'demo' });
-    setData({ items: demo_data[type].slice(0, limit) });
-    setLoading(false);
-  };
+function Analytics({ token, type, limit, offset, timeRange, setIsSubmit }) {
+  const [data, userData, loading] = useSpotifyData({
+    token,
+    type,
+    limit,
+    offset,
+    timeRange,
+  });
 
   useEffect(() => {
-    if (token === 'demo') {
-      fetchDemoData();
-    } else {
-      fetchApiData();
-    }
     document.title = `My Top ${limit}`;
   }, []); // Empty dependency array to run only once when component mounts
 
