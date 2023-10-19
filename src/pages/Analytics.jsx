@@ -1,15 +1,18 @@
 import { Cards } from '../components/Cards';
 import spotifyIcon from '../images/Spotify_Icon_RGB_Green.png';
 import { useSpotifyData } from '../utils/useSpotifyData';
-import { useEffect } from 'react';
+import { useContext, useEffect } from 'react';
+import { TokenContext } from '../context/TokenContext';
 
-function Analytics({ token, type, limit, offset, timeRange, setIsSubmit }) {
+function Analytics({ type, limit, offset, timeRange, setIsSubmit }) {
+  const { token } = useContext(TokenContext);
+
   const [data, userData, loading] = useSpotifyData(
     token,
     type,
     limit,
     offset,
-    timeRange,
+    timeRange
   );
 
   useEffect(() => {

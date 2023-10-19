@@ -1,4 +1,5 @@
-import { createElement, useState } from 'react';
+import { useContext, createElement, useState } from 'react';
+import { TokenContext } from '../context/TokenContext';
 
 import { ArtistsOrTracks } from '../components/ArtistsOrTracks';
 import { Limit } from '../components/Limit';
@@ -6,7 +7,9 @@ import { TimeRange } from '../components/TimeRange';
 
 import { Analytics } from './Analytics';
 
-function Menu({ token }) {
+function Menu() {
+  const { token, setToken } = useContext(TokenContext);
+
   const [isSubmit, setIsSubmit] = useState(false);
 
   const [type, setType] = useState('artist');
@@ -27,11 +30,13 @@ function Menu({ token }) {
             <button className="button" onClick={() => setIsSubmit(true)}>
               Go!
             </button>
+            <button className="button" onClick={() => setToken(null)}>
+              Sign Out
+            </button>
           </div>
         </>
       ) : (
         createElement(Analytics, {
-          token,
           type,
           limit,
           offset,

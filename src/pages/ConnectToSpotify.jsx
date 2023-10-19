@@ -1,14 +1,16 @@
-import { useEffect } from 'react';
+import { useContext, useEffect } from 'react';
 import config from '../config.json';
 import spotifyIcon from '../images/Spotify_Icon_RGB_White.png';
+import { TokenContext } from '../context/TokenContext';
 
-function ConnectToSpotify({ setToken }) {
+function ConnectToSpotify() {
   const tokenPath = `${config.authEndpoint}?client_id=${
     config.clientId[config.mode]
   }&redirect_uri=${config.redirectUri[config.mode]}&scope=${config.scopes.join(
     '%20'
   )}&response_type=token&show_dialog=true`;
 
+  const { setToken } = useContext(TokenContext);
   const handleLoginClick = () => {
     window.open(tokenPath, '_self');
   };
