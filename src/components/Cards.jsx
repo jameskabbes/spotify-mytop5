@@ -10,7 +10,7 @@ import { Panel as TrackPanel } from '../components/Track/Panel';
 
 import { useIsMobile } from '../utils/useIsMobile';
 
-const types = {
+const entities = {
   artist: {
     card: ArtistCard,
     panel: ArtistPanel,
@@ -21,7 +21,7 @@ const types = {
   },
 };
 
-function Cards({ data, type, offset }) {
+function Cards({ data, entity }) {
   const isMobile = useIsMobile();
 
   return (
@@ -29,10 +29,10 @@ function Cards({ data, type, offset }) {
       {data.items.map((item, i) => {
         const props = {
           key: i,
-          ranking: i + 1 + offset,
+          ranking: i + 1,
         };
-        props[type] = item; // Assuming type is defined somewhere
-        return createElement(types[type][isMobile ? 'card' : 'panel'], props); // Return the created element
+        props[entity] = item; // Assuming type is defined somewhere
+        return createElement(entities[entity][isMobile ? 'card' : 'panel'], props); // Return the created element
       })}
     </div>
   );

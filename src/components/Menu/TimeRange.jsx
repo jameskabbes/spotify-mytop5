@@ -1,4 +1,9 @@
-function TimeRange({ timeRange, setTimeRange }) {
+import { useContext } from "react";
+import { TimeRangeContext } from "../../context/TimeRangeContext";
+
+function TimeRange() {
+
+  const { timeRange, setTimeRange } = useContext(TimeRangeContext);
   return (
     <div className="flex flex-col items-center">
       <h2 className="text-center">
