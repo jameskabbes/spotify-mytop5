@@ -4,4 +4,4 @@ This is a React Application built on the Spotify API to show any Spotify User th
 
 ## Use Demo Data
 
-Until this application is approved by spotify, users will need to Use Demo Data
+Until the application is approved by spotify, users will need to use "demo data".
