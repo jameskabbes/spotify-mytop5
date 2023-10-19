@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { generateDemoData } from './generateDemoData';
 import { callApi } from './Api';
 
-function useSpotifyData(token, type, limit, offset, timeRange) {
+function useSpotifyData(token, entity, limit, timeRange) {
   const [data, setData] = useState(null);
   const [userData, setUserData] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -10,10 +10,10 @@ function useSpotifyData(token, type, limit, offset, timeRange) {
   useEffect(() => {
     const fetchData = async () => {
       if (token === 'demo') {
-        setData({ items: generateDemoData(type, limit) });
+        setData({ items: generateDemoData(entity, limit) });
         setUserData({ display_name: 'demo' });
       } else {
-        const url1 = `https://api.spotify.com/v1/me/top/${type}s/?time_range=${timeRange}&limit=${limit}&offset=${offset}`;
+        const url1 = `https://api.spotify.com/v1/me/top/${entity}s/?time_range=${timeRange}&limit=${limit}&offset=0`;
         const url2 = `https://api.spotify.com/v1/me`;
 
         try {

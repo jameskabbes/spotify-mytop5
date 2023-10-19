@@ -3,15 +3,20 @@ import spotifyIcon from '../images/Spotify_Icon_RGB_Green.png';
 import { useSpotifyData } from '../utils/useSpotifyData';
 import { useContext, useEffect } from 'react';
 import { TokenContext } from '../context/TokenContext';
+import { EntityContext } from '../context/EntityContext';
+import { LimitContext } from '../context/LimitContext';
+import { TimeRangeContext } from '../context/TimeRangeContext';
 
-function Analytics({ type, limit, offset, timeRange, setIsSubmit }) {
+function Analytics({ setIsSubmit }) {
   const { token } = useContext(TokenContext);
+  const { entity } = useContext(EntityContext);
+  const { limit } = useContext(LimitContext);
+  const { timeRange } = useContext(TimeRangeContext);
 
   const [data, userData, loading] = useSpotifyData(
     token,
-    type,
+    entity,
     limit,
-    offset,
     timeRange
   );
 
@@ -33,7 +38,7 @@ function Analytics({ type, limit, offset, timeRange, setIsSubmit }) {
               <h2 className="m-0">{userData.display_name}</h2>
             </div>
             <h3>My Top {limit}</h3>
-            <Cards data={data} type={type} offset={offset} />
+            <Cards data={data} entity={entity}/>
             <button className="button p-8" onClick={() => setIsSubmit(false)}>
               Try it again!
             </button>
