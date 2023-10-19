@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { generateDemoData } from './generateDemoData';
+import { callApi } from './Api';
 
 function useSpotifyData({ token, type, limit, offset, timeRange }) {
   const [data, setData] = useState(null);
