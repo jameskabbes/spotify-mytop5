@@ -4,10 +4,10 @@ import { useState, createContext } from 'react';
 const TimeRangeContext = createContext();
 
 function TimeRangeContextProvider({ children }) {
-  const [limit, setTimeRange] = useState( 'all_time' );
+  const [timeRange, setTimeRange] = useState( 'long_term' );
   	
   return (
-    <TimeRangeContext.Provider value={{ limit, setTimeRange }}>
+    <TimeRangeContext.Provider value={{ timeRange, setTimeRange }}>
       {children}
     </TimeRangeContext.Provider>
   );
