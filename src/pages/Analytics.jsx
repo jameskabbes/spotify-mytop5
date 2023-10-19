@@ -4,13 +4,13 @@ import { useSpotifyData } from '../utils/useSpotifyData';
 import { useEffect } from 'react';
 
 function Analytics({ token, type, limit, offset, timeRange, setIsSubmit }) {
-  const [data, userData, loading] = useSpotifyData({
+  const [data, userData, loading] = useSpotifyData(
     token,
     type,
     limit,
     offset,
     timeRange,
-  });
+  );
 
   useEffect(() => {
     document.title = `My Top ${limit}`;
