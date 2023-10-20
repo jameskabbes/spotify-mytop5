@@ -34,13 +34,13 @@ for artist in artists:
     artists_data.append(d)
 
 for track in tracks:
-	res = call_api( track, 'track').json()
-    keys = {'name', 'images'}
-	d = {}
-	for key in keys:
+    res = call_api(track, 'track').json()
+    keys = {'name', 'album', 'artists'}
+
+    for key in keys:
         d[key] = res['tracks']['items'][0][key]
-        
-	tracks_data.append(d)
+
+    tracks_data.append(d)
 
 f = open('../src/demo.json', 'w')
 json.dump({'artist': artists_data, 'track': tracks_data}, f)
